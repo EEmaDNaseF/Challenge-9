@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color :hsl(179, 62%, 43%) ;
+    --secondary-color : hsl(71, 73%, 54%);
+    --p-color : hsl(204, 43%, 93%) ;
+    --p-second-color : hsl(218, 22%, 67%) ;
+    
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--p-second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+.cards {
+    border-radius: 10px;
+    width: 650px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+.cards .card-one,
+.cards .card-two,
+.cards .card-three {
+    padding: 30px;
+}
+.cards .double-cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+/*Start Design Card One */
+
+.cards .card-one {
+    background-color: white;
+
+}
+
+.cards .card-one h2{
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+.cards .card-one h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px ;
+}
+.cards .card-one p {
+    width: 550px;
+    line-height: 1.5;
+    color: var(--p-second-color);
+    margin-bottom: 15px;
+}
+
+/* End Design Card One */
+
+.card-two {
+    background-color: var(--primary-color);
+}
+
+.double-cards .card-two h4 ,
+.double-cards .card-three h4 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.double-cards .card-two p.price {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+}
+.double-cards .card-two p.price .span {
+    font-size: 14px;
+    color: var(--p-color);
+    margin-left: 12px;
+}
+.double-cards .card-two p {
+    color: var(--p-color);
+    margin-bottom: 20px;
+}
+.double-cards .card-two .btn {
+    color: white;
+    background-color: var(--secondary-color);
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.double-cards .card-three p{
+    color: var(--p-color);
+    margin-bottom: 3px;
+}
+
+@media only screen and (max-width :675px) {
+    .cards , .cards .double-cards {
+        grid-template-columns: 1fr;
+    }
+    .cards {
+        width: 80%;
+        margin: 20px auto;
+    }
+    .cards .card-one p {
+        width: auto;
+    }
+
+}
